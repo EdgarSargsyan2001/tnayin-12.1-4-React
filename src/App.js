@@ -1,6 +1,6 @@
 import React from 'react';
-import useLocalSg from "./useLocalSg"
-import ListComp from "./ListComp"
+import useLocalSg from "./components/useLocalSg"
+import ListComp from "./components/ListComponent"
 import './App.css';
 
 export const ListContext = React.createContext('');
@@ -12,35 +12,36 @@ function App() {
     valueInput,
     setValueInput,
     listArr,
-    setListArr,
+    dispatch,
     formClick,
     saveButton,
     clearButton
 
   } = useLocalSg()
-//========================
+
 
   return (
-    <div className='flex'>
-    <div className="App">
+    <div className='flex'  >
+      <h1 className='title'>Todos</h1>
+      <div className="App" >
 
-      {/*  homework 12.1 */}
-      <form className='form' onSubmit={(e) => formClick(e)}>
+        {/*  homework 12.1 */}
+        <form className='form' onSubmit={(e) => formClick(e)}>
 
-        <input value={valueInput} onChange={(e)=>setValueInput(e.target.value)} type="text" />
-        <button className='buttonAdd'>Add</button>
-        <button className='buttonSave' onClick={(e)=>saveButton(e)}>Save</button>
-        <button className='buttonClear' onClick={(e)=>clearButton(e)}>Clear All</button>
-          
-      </form>
+          <input value={valueInput} onChange={(e)=>setValueInput(e.target.value)} type="text" />
+          <button className='buttonAdd'>Add</button>
+          <button className='buttonSave' onClick={(e)=>saveButton(e)}>Save</button>
+          <button className='buttonClear' onClick={(e)=>clearButton(e)}>RmvSave</button>
+            
+        </form>
 
-      {/*  homework 12.3 */}
-      <ListContext.Provider value={{listArr,setListArr}}>
-        <ListComp />
-      </ListContext.Provider>
+        {/*  homework 12.2-4 */}
+        <ListContext.Provider value={{listArr,dispatch} }>
+          <ListComp />
+        </ListContext.Provider>
 
-    
-    </div>
+      
+      </div>
     </div>
   );
 }
