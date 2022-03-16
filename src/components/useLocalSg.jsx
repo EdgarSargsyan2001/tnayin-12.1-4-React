@@ -23,8 +23,7 @@ function reducer(state,action){
 
 
  // homework 12.1
-function useLocalSg(){
-
+ function useLocalSg(){
    // homework 12.4
   const [listArr,dispatch] = useReducer(reducer,JSON.parse(localStorage.getItem("listData")) || [])
   const [valueInput,setValueInput] = useState("")

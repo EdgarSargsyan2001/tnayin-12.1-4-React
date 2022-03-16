@@ -3,8 +3,7 @@ import { useContext } from "react"
 import { ListContext } from "../App"
 
  // homework 12.3
-function ListDelete({deletId}){
-
+export default (function ListDelete({deletId}){
     const {dispatch} = useContext(ListContext)  // homework 12.3
 
     function deletList(){
@@ -18,7 +17,6 @@ function ListDelete({deletId}){
     
     return <button className="delbutton" onClick={deletList}>X</button>
 
-}
+})
 
 
-export default ListDelete

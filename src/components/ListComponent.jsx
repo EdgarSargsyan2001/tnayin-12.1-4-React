@@ -1,11 +1,11 @@
-import { useContext } from "react"
+import { useContext ,memo} from "react"
 import { ListContext } from "../App"
 import ListDelete from './ListDelete'
 import useFetchData from '../components/useFetchData'
 
 
  // homework 12.3
-function ListComponent(){
+export default memo(function ListComponent(){
 
     const {respVal} = useFetchData()   // homework 12.2
     const {listArr} = useContext(ListContext) //homework 12.3
@@ -29,6 +29,5 @@ function ListComponent(){
         </ol>        
     )
 
-}
+})
 
-export default ListComponent
