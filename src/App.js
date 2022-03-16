@@ -28,7 +28,7 @@ function App() {
         {/*  homework 12.1 */}
         <form className='form' onSubmit={(e) => formClick(e)}>
 
-          <input value={valueInput} onChange={(e)=>setValueInput(e.target.value)} type="text" />
+          <input value={valueInput} className="input" onChange={(e)=>setValueInput(e.target.value)} type="text" />
           <button className='buttonAdd'>Add</button>
           <button className='buttonSave' onClick={(e)=>saveButton(e)}>Save</button>
           <button className='buttonClear' onClick={(e)=>clearButton(e)}>RmvSave</button>
