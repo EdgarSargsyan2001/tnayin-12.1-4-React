@@ -10,7 +10,7 @@ function useFetchData(){
         return val.json()
       }).then(response => setRespVal(response.message) )   
       
-    },[])
+    },[Names])
   
   return{respVal}
         
