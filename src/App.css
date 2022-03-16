@@ -45,6 +45,7 @@
 }
 
 .ol{
+    width: 323px !important;
     border-radius: 7px;
     padding: 0;
     background-size:cover ;
@@ -52,7 +53,7 @@
 }
 
 .list{
-    
+    width: 323px !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +77,7 @@
 }
 
 @media screen and (max-width:500px) {
-    .flex{
+    .flex,.ol,.list{
         width:200px !important ;
     }
     .form{
