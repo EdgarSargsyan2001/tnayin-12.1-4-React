@@ -12,7 +12,7 @@ function reducer(state,action){
   }
 
   if(action.type === "delete"){
-   return state.filter((el,index) => index != action.payload.deletId )
+   return state.filter((el,index) => index !== action.payload.deletId )
 
   }
 
