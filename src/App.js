@@ -21,9 +21,9 @@ function App() {
 
 
   return (
-    <div className='flex'  >
+    <div className='App'  >
       <h1 className='title'>Todos</h1>
-      <div className="App" >
+      <div className="flex" >
 
         {/*  homework 12.1 */}
         <form className='form' onSubmit={(e) => formClick(e)}>
